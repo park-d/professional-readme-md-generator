@@ -18,6 +18,13 @@ const questions = [
     'Provide instructions how to reach you with additional questions.'
 ];
 
+const required = [
+    'Project title is required.',
+    'Project description is required.',
+    'Usage instructions are required.',
+    'GitHub username is required.',
+];
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
@@ -29,11 +36,27 @@ function init() {
                 type: 'input',
                 message: `${questions[0]}`,
                 name: 'title',
+                validate: (userTitle) => {
+                    if(userTitle) {
+                        return true;
+                    } else {
+                        console.log(`${required[0]}`);
+                        return false;
+                    }
+                },
             },
             {
                 type: 'input',
                 message: `${questions[1]}`,
                 name: 'description',
+                validate: (userDescription) => {
+                    if(userDescription) {
+                        return true;
+                    } else {
+                        console.log(`${required[1]}`);
+                        return false;
+                    }
+                },
             },
             {
                 type: 'input',
@@ -44,6 +67,14 @@ function init() {
                 type: 'input',
                 message: `${questions[3]}`,
                 name: 'usage',
+                validate: (userUsage) => {
+                    if(userUsage) {
+                        return true;
+                    } else {
+                        console.log(`${required[2]}`);
+                        return false;
+                    }
+                }
             },
             {
                 type: 'input',
@@ -80,6 +111,14 @@ function init() {
                 type: 'input',
                 message: `${questions[8]}`,
                 name: 'username',
+                validate: (userGithub) => {
+                    if(userGithub) {
+                        return true;
+                    } else {
+                        console.log(`${required[3]}`);
+                        return false;
+                    }
+                },
             },
             {
                 type: 'input',
@@ -91,8 +130,9 @@ function init() {
                 message: `${questions[10]}`,
                 name: 'questions',
             },])
-        .then((output) => {
-            console.log(output);
+        .then((answers) => {
+            let readmeData = generateMarkdown(answers);
+            writeToFile("README.md", readmeData);
         });
 };
 
