@@ -26,7 +26,10 @@ const required = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, inputs) {
+    fs.writeFile(fileName, inputs, (err) =>
+        err ? console.error(err) : console.log('README.md generated.'));
+};
 
 // TODO: Create a function to initialize app
 function init() {
