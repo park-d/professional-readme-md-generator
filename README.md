@@ -14,7 +14,7 @@ When creating an open source project on GitHub, it’s important to have a high-
 In order to use this application, [node.js](https://nodejs.org/en/) and the [npm inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4) package must be installed.
 
 ## Usage 
-In order to use this application, the user must run the application using node.js in the command line. It will then prompt the user with questions to fill out for their professional readme.md file. Video walkthrough included below.
+In order to use this application, the user must run the application using node.js in the command line. It will then prompt the user with questions to fill out for their professional readme.md file. Video walkthrough included [here](https://drive.google.com/file/d/1JU4d1giCdRo_aQ_1w_68ZI5u55xYdEO2/view).
 
 ![Screenshot of prompts answered from application](./assets/images/prompt-images.JPG)
 ![Screenshot of generated md file](./assets/images/generated-md-file.JPG)
