@@ -19,13 +19,34 @@ function renderLicenseBadge(license) {
     case "The Unlicense":
       return `(https://img.shields.io/badge/license-Unlicense-blue.svg)`;
     default:
-      return;
+      return ``;
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  switch(license) {
+    case "GNU AGPL v3":
+      return `(https://www.gnu.org/licenses/agpl-3.0)`;
+    case "GNU GPL v3":
+      return `(https://www.gnu.org/licenses/gpl-3.0)`;
+    case "GNU LGPL v3":
+      return `(https://www.gnu.org/licenses/lgpl-3.0)`;
+    case "Mozilla Public License 2.0":
+      return `(https://opensource.org/licenses/MPL-2.0)`;
+    case "Apache License 2.0":
+      return `(https://opensource.org/licenses/Apache-2.0)`;
+    case "The MIT License":
+      return `(https://opensource.org/licenses/MIT)`;
+    case "Boost Software License 1.0":
+      return `(https://www.boost.org/LICENSE_1_0.txt)`;
+    case "The Unlicense":
+      return `(http://unlicense.org/)`;
+    default:
+      return ``;
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
