@@ -50,7 +50,28 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  switch(license) {
+    case "GNU AGPL v3":
+      return `![This repository is covered under GNU AGPLv3]`;
+    case "GNU GPL v3":
+      return `![This repository is covered under GNU GPLv3.]`;
+    case "GNU LGPL v3":
+      return `![This repository is covered under GNU LGPLv3.]`;
+    case "Mozilla Public License 2.0":
+      return `![This repository is covered under Mozilla Public License 2.0.]`;
+    case "Apache License 2.0":
+      return `![This repository is covered under Apache License 2.0.]`;
+    case "The MIT License":
+      return `![This repository is covered under MIT License.]`;
+    case "Boost Software License 1.0":
+      return `![This repository is covered under Boost Software License 1.0.]`;
+    case "The Unlicense":
+      return `![This repository is Unlicensed and free to use.]`;
+    default:
+      return;
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
