@@ -16,7 +16,10 @@ In order to use this application, [node.js](https://nodejs.org/en/) and the [npm
 ## Usage 
 In order to use this application, the user must run the application using node.js in the command line. It will then prompt the user with questions to fill out for their professional readme.md file. Video walkthrough included below.
 
-![Video Walkthrough of application]()
+![Screenshot of prompts answered from application](./assets/images/prompt-images.JPG)
+![Screenshot of generated md file](./assets/images/generated-md-file.JPG)
+![Screenshot of md preview](./assets/images/example-md-preview.JPG)
+
 ## Credits
 While working on this project, I worked alongside Jackson Myhre in the same bootcamp class
 - [node.js](https://nodejs.org/en/)
