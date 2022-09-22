@@ -22,7 +22,79 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt([
+            {
+                type: 'input',
+                message: `${questions[0]}`,
+                name: 'title',
+            },
+            {
+                type: 'input',
+                message: `${questions[1]}`,
+                name: 'description',
+            },
+            {
+                type: 'input',
+                message: `${questions[2]}`,
+                name: 'installation',
+            },
+            {
+                type: 'input',
+                message: `${questions[3]}`,
+                name: 'usage',
+            },
+            {
+                type: 'input',
+                message: `${questions[4]}`,
+                name: 'credits',
+            },
+            {
+                type: 'list',
+                message: `${questions[5]}`,
+                name: 'license',
+                choices: [
+                    'GNU AGPL v3',
+                    'GNU GPL v3',
+                    'GNU LGPL v3',
+                    'Mozilla Public License 2.0',
+                    'Apache License 2.0',
+                    'The MIT License',
+                    'Boost Software License 1.0',
+                    'The Unlicense'
+                ],
+                default: 'The Unlicense'
+            },
+            {
+                type: 'input',
+                message: `${questions[6]}`,
+                name: 'contributing',
+            },
+            {
+                type: 'input',
+                message: `${questions[7]}`,
+                name: 'tests',
+            },
+            {
+                type: 'input',
+                message: `${questions[8]}`,
+                name: 'username',
+            },
+            {
+                type: 'input',
+                message: `${questions[9]}`,
+                name: 'email',
+            },
+            {
+                type: 'input',
+                message: `${questions[10]}`,
+                name: 'questions',
+            },])
+        .then((output) => {
+            console.log(output);
+        });
+};
 
 // Function call to initialize app
 init();
